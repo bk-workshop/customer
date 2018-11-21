@@ -7,7 +7,7 @@
         <configuration>
             <property name="deleteTemporaryFiles">false</property>
             <property name="containerStartTimeoutMs">60000</property>
-            <property name="includeRequiredLibraries">fromPom</property>
+            <!--<property name="includeRequiredLibraries">fromPom</property>-->
         </configuration>
     </container>
 
