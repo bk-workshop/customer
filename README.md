@@ -14,3 +14,5 @@ docker run -p 8080:8080 nexus-ci.kumuluz.com/customers
 
 ## Run application on Docker Swarm
 Configuration is provided in `docker-compose.yml`
+
+## How to setup CI/CD for microservices
