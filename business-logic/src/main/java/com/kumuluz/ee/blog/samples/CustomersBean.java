@@ -21,7 +21,12 @@ import javax.ws.rs.core.UriInfo;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * Zrno CustomersBean je namenjeno upravljanju entitete Customers
+ *
+ * @since 1.0.0
+ * @author Zvone Gazvoda
+ */
 @RequestScoped
 public class CustomersBean {
 
@@ -52,6 +57,14 @@ public class CustomersBean {
 
     }
 
+    /**
+     * Metoda pridobi seznam strank, ki ustrezajo filtrom. Metoda stranke pridobi iz podatkovne baze.
+     *
+     * @since 1.0.0
+     * @author Zvone Gazvoda
+     * @param uriInfo 	Objekt, ki vsebuje vrednosti filtrov.
+     * @return Seznam objektov strank.
+     */
     public List<Customer> getCustomersFilter(UriInfo uriInfo) {
 
         QueryParameters queryParameters = QueryParameters.query(uriInfo.getRequestUri().getQuery()).defaultOffset(0)
@@ -60,6 +73,14 @@ public class CustomersBean {
         return JPAUtils.queryEntities(em, Customer.class, queryParameters);
     }
 
+    /**
+     * Metoda pridobi stranko, ki ustreza identifikatorju.
+     *
+     * @author Zvone Gazvoda
+     * @param customerId  Identifikator stranke.
+     * @throws NotFoundException Napaka v primeru, da stranka ne obstaja.
+     * @return Objekt stranke.
+     */
     public Customer getCustomer(String customerId) {
 
         Customer customer = em.find(Customer.class, customerId);
@@ -71,6 +92,13 @@ public class CustomersBean {
         return customer;
     }
 
+    /**
+     * Metoda prejme objekt Customer in ustvari novo entiteto.
+     *
+     * @author Zvone Gazvoda
+     * @param customer Objekt, ki vsebuje podatke stranke.
+     * @return Novo kreirana entiteta stranke.
+     */
     public Customer createCustomer(Customer customer) {
 
         try {
@@ -84,6 +112,14 @@ public class CustomersBean {
         return customer;
     }
 
+    /**
+     * Metoda omogoča posodabljanje obstoječe stranke.
+     *
+     * @author Zvone Gazvoda
+     * @param customer Objekt, ki vsebuje podatke stranke.
+     * @param customerId Identifikator obstoječe stranke.
+     * @return Posodobljena stranka.
+     */
     public Customer putCustomer(String customerId, Customer customer) {
 
         Customer c = em.find(Customer.class, customerId);
@@ -104,6 +140,13 @@ public class CustomersBean {
         return customer;
     }
 
+    /**
+     * Metoda omogoča odstranjevanje strank..
+     *
+     * @author Zvone Gazvoda
+     * @param customerId Identifikator stranke za brisanje.
+     * @return Status brisanja.
+     */
     public boolean deleteCustomer(String customerId) {
 
         Customer customer = em.find(Customer.class, customerId);
@@ -144,7 +187,6 @@ public class CustomersBean {
     }
 
     public void loadOrder(Integer n) {
-
 
     }
 }
