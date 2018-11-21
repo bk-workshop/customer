@@ -30,7 +30,6 @@ public class RestUtilsTest {
         Customer c2 = new Customer();
         c2.setAddress("Dunajska cesta 15, 1000 Ljubljana");
         c2.setFirstName("Janez");
-
         c2.setDateOfBirth(d);
 
         Customer c3 = new Customer();
@@ -40,15 +39,15 @@ public class RestUtilsTest {
 
         Customer c4 = new Customer();
         c4.setAddress("Dunajska cesta 15, 1000 Ljubljana");
-        c2.setLastName("Novak");
+        c4.setLastName("Novak");
         c4.setDateOfBirth(d);
 
         Customer c5 = new Customer();
-        c4.setAddress("Dunajska cesta 15, 1000 Ljubljana");
-        c2.setLastName("Novak");
+        c5.setAddress("Dunajska cesta 15, 1000 Ljubljana");
+        c5.setLastName("Novak");
 
         Customer c6 = new Customer();
-        c2.setLastName("Novak");
+        c6.setLastName("Novak");
 
         assertEquals(true, utils.isCustomerValid(c1));
         assertEquals(false, utils.isCustomerValid(c2));
