@@ -11,3 +11,5 @@ docker run -d --name customers-database -e POSTGRES_USER=dbuser -e POSTGRES_PASS
 ```bash
 docker run -p 8080:8080 nexus-ci.kumuluz.com/customers
 ```
+
+## How to setup CI/CD for microservices
