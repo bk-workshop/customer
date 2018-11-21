@@ -47,7 +47,6 @@ public class RestUtilsTest {
         assertEquals(false, utils.isCustomerValid(c2));
         assertEquals(false, utils.isCustomerValid(c3));
         assertEquals(false, utils.isCustomerValid(c4));
-
     }
 
 }
