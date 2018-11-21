@@ -1,4 +1,4 @@
-package com.kumuluz.ee.blog.samples.services.producers;
+package com.kumuluz.ee.blog.samples.producers;
 
 import javax.enterprise.context.RequestScoped;
 import javax.enterprise.inject.Disposes;

@@ -34,6 +34,7 @@
             <groupId>com.kumuluz.ee.blog</groupId>
             <artifactId>customers-persistence</artifactId>
         </dependency>
+
     </dependencies>
 
 </project>

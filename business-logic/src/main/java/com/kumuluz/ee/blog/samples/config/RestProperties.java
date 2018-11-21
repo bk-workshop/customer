@@ -1,4 +1,4 @@
-package com.kumuluz.ee.blog.samples.services.config;
+package com.kumuluz.ee.blog.samples.config;
 
 import com.kumuluz.ee.configuration.cdi.ConfigBundle;
 import com.kumuluz.ee.configuration.cdi.ConfigValue;

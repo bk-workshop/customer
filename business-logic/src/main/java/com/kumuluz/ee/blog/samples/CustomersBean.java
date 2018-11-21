@@ -1,9 +1,9 @@
-package com.kumuluz.ee.blog.samples.services;
+package com.kumuluz.ee.blog.samples;
 
 
 import com.kumuluz.ee.blog.samples.models.Customer;
 import com.kumuluz.ee.blog.samples.models.Order;
-import com.kumuluz.ee.blog.samples.services.config.RestProperties;
+import com.kumuluz.ee.blog.samples.config.RestProperties;
 import com.kumuluz.ee.logs.LogManager;
 import com.kumuluz.ee.logs.Logger;
 import com.kumuluz.ee.rest.beans.QueryParameters;

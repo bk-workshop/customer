@@ -2,7 +2,7 @@ package com.kumuluz.ee.blog.samples.api.v1.resources;
 
 import com.kumuluz.ee.logs.cdi.Log;
 import com.kumuluz.ee.blog.samples.models.Customer;
-import com.kumuluz.ee.blog.samples.services.CustomersBean;
+import com.kumuluz.ee.blog.samples.CustomersBean;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
