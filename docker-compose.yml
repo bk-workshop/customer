@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+    customers-service:
+        image: nexus-ci.kumuluz.com/customers
+        restart: always
+        ports:
+            - 8083:8080
+        networks:
+            - customers-network
+
+    customers-database:
+        image: postgres:latest
+        restart: always
+        environment:
+          - POSTGRES_USER=dbuser
+          - POSTGRES_PASSWORD=postgres
+          - POSTGRES_DB=customer
+        ports:
+            - 5432:5432
+        networks:
+            - customers-network
+
+networks:
+  customers-network:
