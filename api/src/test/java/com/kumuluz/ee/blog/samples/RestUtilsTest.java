@@ -43,7 +43,7 @@ public class RestUtilsTest {
         c2.setLastName("Novak");
         c4.setDateOfBirth(d);
 
-        assertEquals(false, utils.isCustomerValid(c1));
+        assertEquals(true, utils.isCustomerValid(c1));
         assertEquals(false, utils.isCustomerValid(c2));
         assertEquals(false, utils.isCustomerValid(c3));
         assertEquals(false, utils.isCustomerValid(c4));
