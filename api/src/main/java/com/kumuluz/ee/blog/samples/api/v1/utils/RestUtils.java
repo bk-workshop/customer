@@ -11,7 +11,6 @@ public class RestUtils {
 
         Calendar cal = Calendar.getInstance();
         cal.add(Calendar.YEAR, -150);
-
         Date d = cal.getTime();
 
         return customer.getAddress() != null && customer.getDateOfBirth() != null && customer.getDateOfBirth().after(d) && customer

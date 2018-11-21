@@ -30,10 +30,23 @@ public class RestUtilsTest {
         Customer c2 = new Customer();
         c2.setAddress("Dunajska cesta 15, 1000 Ljubljana");
         c2.setFirstName("Janez");
-        c2.setLastName("Novak");
+
         c2.setDateOfBirth(d);
 
+        Customer c3 = new Customer();
+        c3.setAddress("Dunajska cesta 15, 1000 Ljubljana");
+        c3.setFirstName("Janez");
+        c3.setDateOfBirth(d);
+
+        Customer c4 = new Customer();
+        c4.setAddress("Dunajska cesta 15, 1000 Ljubljana");
+        c2.setLastName("Novak");
+        c4.setDateOfBirth(d);
+
+        assertEquals(false, utils.isCustomerValid(c1));
         assertEquals(false, utils.isCustomerValid(c2));
+        assertEquals(false, utils.isCustomerValid(c3));
+        assertEquals(false, utils.isCustomerValid(c4));
 
     }
 
